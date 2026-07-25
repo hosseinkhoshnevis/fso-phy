@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fsophy"
+version = "0.1.0"
+description = "Baseband PHY simulation of an SDA-OCT-class free-space optical link modem"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Hossein Khoshnevis", email = "hossein.khoshnevis@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+dev = ["pytest", "matplotlib>=3.5"]
+
+[tool.setuptools.packages.find]
+include = ["fsophy*"]
